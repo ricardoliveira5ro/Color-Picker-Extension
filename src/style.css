@@ -1,5 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@600&family=Numans&display=swap');
+
+:root {
+    --lightBlue: #c7e6ff;
+    --blue: #6fbeff;
+    --darkBlue: #074272;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: 0;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.div_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lightBlue);
+    padding: 30px 10px 30px 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+.button_pick {
+    outline: none;
+    border: none;
+    background: var(--darkBlue);
+    color: white;
+    padding: 7px 15px 7px 15px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-family: 'Numans', sans-serif;
+    cursor: pointer;
+}
+
+.picked_colors {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px 0 12px;
+    border: 1px solid var(--lightBlue);
+}
+
+.picked_colors_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.picked_colors_header h3{
+    color: var(--darkBlue);
+    font-family: 'Eczar', serif;
+}
+
+.picked_colors_header span{
+    color: var(--blue);
+    font-family: 'Eczar', serif;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.picked_colors_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.color {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 17px;
+    width: calc(100% / 3);
+}
+
+.preview_block {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 100%;
+    background: var(--blue);
+}
+
+.color_value {
+    font-family: 'Numans', sans-serif;
+} 
