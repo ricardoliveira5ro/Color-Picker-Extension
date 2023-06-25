@@ -13,9 +13,6 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
 }
 
@@ -23,7 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 350px;
-    border-radius: 10px;
 }
 
 .div_button {
@@ -32,7 +28,6 @@ body {
     justify-content: center;
     background: var(--lightBlue);
     padding: 30px 10px 30px 10px;
-    border-radius: 10px 10px 0 0;
 }
 
 .button_pick {
@@ -48,8 +43,6 @@ body {
 }
 
 .picked_colors {
-    display: flex;
-    flex-direction: column;
     padding: 8px 12px 0 12px;
     border: 1px solid var(--lightBlue);
 }
