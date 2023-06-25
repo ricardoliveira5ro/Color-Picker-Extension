@@ -11,14 +11,24 @@ const clearAll = () => {
 }
 
 const copyToClipboard = (elem) => {
-    navigator.clipboard.writeText(elem.dataset.color);
+    var color = elem.dataset.color;
+    navigator.clipboard.writeText(color);
+
+    document.getElementById("C-" + color).style.display = "none";
+    document.getElementById("Copied-" + color).style.display = "inline";
+
+    setTimeout(() => {
+        document.getElementById("C-" + color).style.display = "inline";
+        document.getElementById("Copied-" + color).style.display = "none";
+    }, 1000)
 }
 
 const fetchColors = () => {
     colorList.innerHTML = pickedColors.map(color => `
         <li class="color">
             <span class="preview_block" style="background: ${color}; border: 1px solid ${color == "#ffffff" ? "#ccc" : color}"></span>
-            <span class="color_value" data-color="${color}">${color}</span>
+            <img class="copied" id="Copied-${color}" src="../icons/check.png" alt="Copied">
+            <span class="color_value" id="C-${color}" data-color="${color}">${color}</span>
         </li>
     `).join("")
 
@@ -34,17 +44,13 @@ const enableEyeDropper = async () => {
         const eyeDropper = new EyeDropper();
         const { sRGBHex } = await eyeDropper.open();
 
-        //navigator.clipboard.writeText(sRGBHex)
-
         if (!pickedColors.includes(sRGBHex)) {
             pickedColors.push(sRGBHex);
             localStorage.setItem("picked_colors", JSON.stringify(pickedColors))
             fetchColors();
         }
 
-    } catch (erorr) {
-
-    }
+    } catch (error) { }
 }
 
 
