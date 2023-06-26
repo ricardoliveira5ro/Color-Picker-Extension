@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Color Picker",
-    "description": "This Color Picker is a powerful browser extension that enables users to effortlessly select any color from their screen. With a simple click, users can capture any desired color, which is then temporarily saved within the extension. The extension provides the convenience of copying the corresponding color code to the clipboard, allowing users to seamlessly integrate the chosen color into their projects.",
+    "description": "Powerful browser extension that enables users to capture any screen color, save it and copy the code for project integration",
     "version": "1.0",
     "action": {
         "default_popup": "src/index.html"
