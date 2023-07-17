@@ -18,7 +18,7 @@ The Eyedropper Color Picker Chrome Extension is a powerful tool that allows user
 
 To get started with the Eyedropper Color Picker Chrome Extension, follow these steps:
 
-1. Download the extension from the Chrome Web Store (1) or this repository (2) and install (1) or load (2) it in your browser.
+1. Download and Install the extension from the Chrome Web Store (https://chrome.google.com/webstore/detail/color-picker/hibbdojcpopkcbodcoloooghilhggono)
 2. Once installed, you can access the extension by clicking on its icon in the Chrome toolbar
 
 ---
